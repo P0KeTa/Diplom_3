@@ -1,4 +1,4 @@
-package ru.p0keta.stellarBurgers.data;
+package ru.poketa.stellar.burgers.data;
 
 import net.datafaker.Faker;
 

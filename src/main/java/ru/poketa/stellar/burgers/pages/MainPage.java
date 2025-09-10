@@ -1,4 +1,4 @@
-package ru.p0keta.stellarBurgers.pages;
+package ru.poketa.stellar.burgers.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

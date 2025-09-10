@@ -1,4 +1,4 @@
-package ru.p0keta.stellarBurgers.models;
+package ru.poketa.stellar.burgers.models;
 
 import lombok.Getter;
 import lombok.Setter;

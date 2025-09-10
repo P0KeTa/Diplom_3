@@ -1,12 +1,12 @@
-package ru.p0keta.stellarBurgers.steps;
+package ru.poketa.stellar.burgers.steps;
 
 import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import ru.p0keta.stellarBurgers.models.User;
+import ru.poketa.stellar.burgers.models.User;
 
 import static io.restassured.RestAssured.given;
-import static ru.p0keta.stellarBurgers.data.TestData.*;
+import static ru.poketa.stellar.burgers.data.TestData.*;
 
 public class UserSteps {
 

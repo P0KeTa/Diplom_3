@@ -5,14 +5,14 @@ import org.junit.Test;
 import static java.net.HttpURLConnection.HTTP_OK;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertTrue;
-import static ru.p0keta.stellarBurgers.data.TestData.*;
-import static ru.p0keta.stellarBurgers.steps.UserSteps.loginUser;
+import static ru.poketa.stellar.burgers.data.TestData.*;
+import static ru.poketa.stellar.burgers.steps.UserSteps.loginUser;
 
 public class RegisterPageTest extends BaseTest {
 
     @DisplayName("Успешная регистрация")
     @Test
-    public void registerWithValidData() {
+    public void registerWithValidDataTest() {
         goPage(URL_PAGE);
         mainPage.clickLoginButtonOnMainPage();
         registerPage.clickRegisterButton();
@@ -32,7 +32,7 @@ public class RegisterPageTest extends BaseTest {
     @DisplayName("Ошибка для некорректного пароля")
     @Description("Минимальный пароль — шесть символов. Ввод 5-ти символов")
     @Test
-    public void registerWithInvalidPassword() {
+    public void registerWithInvalidPasswordTest() {
         goPage(URL_PAGE);
         mainPage.clickLoginButtonOnMainPage();
         registerPage.clickRegisterButton();

@@ -9,15 +9,16 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.p0keta.stellarBurgers.models.User;
-import ru.p0keta.stellarBurgers.pages.LoginPage;
-import ru.p0keta.stellarBurgers.pages.MainPage;
-import ru.p0keta.stellarBurgers.pages.RegisterPage;
+import ru.poketa.stellar.burgers.models.User;
+import ru.poketa.stellar.burgers.pages.LoginPage;
+import ru.poketa.stellar.burgers.pages.MainPage;
+import ru.poketa.stellar.burgers.pages.RegisterPage;
 
 import java.time.Duration;
 
-import static ru.p0keta.stellarBurgers.data.TestData.*;
-import static ru.p0keta.stellarBurgers.steps.UserSteps.deleteUser;
+import static ru.poketa.stellar.burgers.data.TestData.*;
+import static ru.poketa.stellar.burgers.steps.UserSteps.createUser;
+import static ru.poketa.stellar.burgers.steps.UserSteps.deleteUser;
 
 
 public class BaseTest {
@@ -43,6 +44,7 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
         }
         driver = new ChromeDriver(options);
+
         RestAssured.baseURI = URL_PAGE;
 
         userForCreate = new User(EMAIL, PASSWORD, NAME);
@@ -52,6 +54,7 @@ public class BaseTest {
         registerPage = new RegisterPage(driver);
         loginPage = new LoginPage(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        response = createUser(userForCreate);
     }
 
 
